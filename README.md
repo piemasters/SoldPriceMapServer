@@ -1,6 +1,18 @@
 # Sold Price Map Server
 
 This is the server side component of the Sold Price Map technical challenge.
+The GraphQL API can be accessed at: https://server.davidnorton.app/graphql
+
+## Local Setup
+
+After cloning the project and running `npm install` to run the server locally you will need to create a file `mongo-details.json` in the root of the project. The file should contain the following:
+```
+{
+  "uri": "mongodb+srv://<USERNAME>:<PASSWORD>@<ADDRESS>/<COLLECTION>?retryWrites=true"
+}
+```
+I have included the data file converted into the JSON format used to populate the database table in `data\sold-price.data.json`.
+
 
 ## Challenge
 You have been given a [set of data points](data/sold-price-data.txt), with each item taking the following form:
