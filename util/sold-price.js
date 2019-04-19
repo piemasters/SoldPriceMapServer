@@ -30,12 +30,23 @@ const formatQuery = (results, queryData) => {
 };
 
 const generateResponse = (results, queries) => {
-    return [
-        {
-            'name': 'test',
-            'values': [{ 'lat': 1, 'long': 2, 'price': 0 }]
+    let response = [];
+
+    // Setup response template with each range group
+    for (const q in queries) {
+        response.push({ name: queries[q].name, values: [] });
+    }
+    // Add each result to the correct range group
+    for (const point in results) {
+        for (const query in queries) {
+            // If the results point falls within the range add it to the group
+            if (results[point].price >= queries[query].low && results[point].price < queries[query].high) {
+                response[query].values.push(results[point]);
+                break;
+            }
         }
-    ];
+    }
+    return response;
 };
 
 exports.getPercentile = getPercentile;
