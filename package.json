@@ -1,6 +1,6 @@
 {
   "name": "SoldPriceMapServer",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "The server side component of the Sold Price Map technical challenge",
   "author": "David Norton",
   "license": "ISC",
