@@ -1,6 +1,6 @@
 {
   "name": "SoldPriceMapServer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The server side component of the Sold Price Map technical challenge",
   "author": "David Norton",
   "license": "ISC",
@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.2.1",
     "mongodb": "^3.2.3",
     "mongoose": "^5.5.1"
   },
