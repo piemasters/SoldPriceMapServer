@@ -1,12 +1,14 @@
 {
   "name": "SoldPriceMapServer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The server side component of the Sold Price Map technical challenge",
   "author": "David Norton",
   "license": "ISC",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "mocha",
+    "start-dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -16,6 +18,10 @@
     "mongoose": "^5.5.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.18.11",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0"
   }
 }
